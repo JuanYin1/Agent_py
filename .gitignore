@@ -1,0 +1,41 @@
+# Ignore environment variables and secrets
+.env
+.env.*  # e.g., .env.development, .env.production
+
+# Ignore Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+.venv/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore OS- or IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore Node.js-related
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# Ignore compiled code (optional)
+*.class
+*.o
+*.out
+*.so
+*.dll
+*.exe
+.env
