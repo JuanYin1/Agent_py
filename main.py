@@ -48,3 +48,9 @@ agent_executor = AgentExecutor(agent=agent, tools=[], verbose=True)
 raw_response = agent_executor.invoke({"query" : "introduce yourself."})
 print(raw_response)
 
+# formate the output : use parser to parse the content
+try:
+    structured_response = parser.parse(raw_response.get("output"))
+except Exception as error:
+    print("Error parsing response:", error, "The raw response is: ", raw_response)
+
