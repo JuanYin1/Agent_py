@@ -1,0 +1,5 @@
+--- Research Output ---
+Timestamp: 2025-05-31 15:57:32.249955
+
+Python rstrip function - The rstrip() function is a built-in method in Python that's used to remove trailing whitespace from a string. It returns a new string with the trailing characters removed. The syntax of the function is: string.rstrip([chars]), where 'chars' is an optional parameter specifying a set of characters to be removed from the end of the string. By default, if 'chars' is not provided, it will remove all whitespace characters (such as spaces, tabs, and newlines) from the right side of the string.
+
