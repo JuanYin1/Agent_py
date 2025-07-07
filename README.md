@@ -35,6 +35,7 @@ conda activate env
 pip install -r requirements.txt
 ```
 
-
-#### Github Action
-* added GitHub Action ```python-dependencies```
+#### Add GitHub Actions
+```
+python-dependencies.yml
+```
