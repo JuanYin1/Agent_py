@@ -1,0 +1,25 @@
+name: Notify Team on Successful Main Push
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Send fetch reminder email
+        # Runs only if all previous steps & jobs succeeded
+        if: success()
+        uses: dawidd6/action-send-mail@v6
+        with:
+          connection_url: ${{ secrets.MAIL_CONNECTION }}
+          subject: "[Reminder] New commit pushed to main"
+          html_body: |
+            <p>Hi team,</p>
+            <p>A new commit has been pushed to <b>main</b> in <i>${{ github.repository }}</i>.</p>
+            <p>Please run <code>git fetch origin main</code> to update your local branch.</p>
+            <p>– GitHub Actions</p>
+          to: j9yin@ucsd.edu
