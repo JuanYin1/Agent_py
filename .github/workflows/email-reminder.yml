@@ -13,7 +13,7 @@ jobs:
       - name: Send fetch reminder email
         # Runs only if all previous steps & jobs succeeded
         if: success()
-        uses: dawidd6/action-send-mail@v5
+        uses: dawidd6/action-send-mail@v6
         with:
           connection_url: ${{ secrets.MAIL_CONNECTION }}
           subject: "[Reminder] New commit pushed to main"
