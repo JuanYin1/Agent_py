@@ -1,4 +1,4 @@
-name: Notify Team on Successful Main Push
+name: email-reminder
 
 on:
   push:
